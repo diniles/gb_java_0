@@ -83,9 +83,13 @@ public class Homework {
     private static int[] createArray(int len, int initialValue) {
         // должен вернуть массив длины len, каждое значение которого равно initialValue
         int[] array = new int[len];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = initialValue;
-        }
+//        раз мы уже всё равно подключаем Arrays
+        Arrays.fill(array, initialValue);
+
+//        for (int i = 0; i < array.length; i++) {
+//            array[i] = initialValue;
+//        }
+        
         return array;
     }
 
@@ -149,9 +153,9 @@ public class Homework {
     }
 
     private static void printMatrixInt(int[][] array) {
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                System.out.printf("%d ", array[i][j]);
+        for (int[] ints : array) {
+            for (int anInt : ints) {
+                System.out.printf("%d ", anInt);
             }
             System.out.println();
         }
