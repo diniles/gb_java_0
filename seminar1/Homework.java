@@ -1,3 +1,5 @@
+package seminar1;
+
 public class Homework {
 
     public static void main(String[] args) {
@@ -10,8 +12,14 @@ public class Homework {
 //        System.out.println(isPositive(0)); // false
 //        System.out.println(isPositive(-3)); // false
 //
-        printString("abcd", 5); // abcdabcdabcdabcdabcd
+//        printString("abcd", 5); // abcdabcdabcdabcdabcd
 //
+        System.out.println(isLeapYear(0));
+        System.out.println(isLeapYear(4));
+        System.out.println(isLeapYear(100));
+        System.out.println(isLeapYear(400));
+        System.out.println(isLeapYear(2024));
+
 //        int[] arr = createArray(5, 10);
 //        System.out.println(Arrays.toString(arr)); // [10, 10, 10, 10, 10]
 //
@@ -43,7 +51,7 @@ public class Homework {
     private static boolean isLeapYear(int year) {
         // проверить, является ли год високосным. если да - return true
         // год является високосным, если он делится на 4, но не делится на 100, но делится на 400
-        return false;
+        return year % 400 == 0 || (year % 4 == 0 && year % 100 != 0);
     }
 
     private static int[] createArray(int len, int initialValue) {
