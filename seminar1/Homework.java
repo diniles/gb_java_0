@@ -28,11 +28,14 @@ public class Homework {
 //        int[] array = {0, 1, 0, 1, 0, 1, 0, 1, 0};
 //        changeOneToZero(array);
 //
-        timesTwo(new int[]{1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1});
-
+//        timesTwo(new int[]{1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1});
 //
-//        int[][] array = new int[4][4]; // [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, x], [0, 0, 0, 1]]
-//        int x = array[2][3];
+
+        int[][] matrix = new int[4][4]; // [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, x], [0, 0, 0, 1]]
+        printMatrixInt(matrix);
+        System.out.println();
+        fillMatrixDiagonals(matrix);
+        printMatrixInt(matrix);
     }
 
     /**
@@ -107,5 +110,35 @@ public class Homework {
          *
          * 4. Подготовить вопросы к следующему уроку.
          */
+    }
+
+    /**
+     * 3. Создать квадратный двумерный целочисленный массив (количество строк и столбцов одинаковое),
+     * и с помощью цикла(-ов) заполнить его диагональные элементы единицами (можно только одну из диагоналей, если обе
+     * сложно).
+     * Определить элементы одной из диагоналей можно по следующему принципу: индексы таких элементов равны, то есть
+     * [0][0], [1][1], [2][2], …, [n][n];
+     * <p>
+     * Также заполнить элементы побочной диагонали
+     */
+
+    private static void fillMatrixDiagonals(int[][] array) {
+        int length = array.length;
+        for (int i = 0, j = 0; i < length; i++, j++) {
+            array[i][j] = 1;
+        }
+        for (int i = length - 1; i >= 0; i--) {
+            array[i][length - 1 - i] = 1;
+        }
+
+    }
+
+    private static void printMatrixInt(int[][] array) {
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                System.out.printf("%d ", array[i][j]);
+            }
+            System.out.println();
+        }
     }
 }
