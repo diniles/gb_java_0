@@ -6,11 +6,11 @@ public class Homework {
 //        System.out.println(isSumBetween10And20(7, 15)); // false
 //        System.out.println(isSumBetween10And20(2, 6)); // false
 
-        System.out.println(isPositive(5)); // true
-        System.out.println(isPositive(0)); // false
-        System.out.println(isPositive(-3)); // false
+//        System.out.println(isPositive(5)); // true
+//        System.out.println(isPositive(0)); // false
+//        System.out.println(isPositive(-3)); // false
 //
-//        printString("abcd", 5); // abcdabcdabcdabcdabcd
+        printString("abcd", 5); // abcdabcdabcdabcdabcd
 //
 //        int[] arr = createArray(5, 10);
 //        System.out.println(Arrays.toString(arr)); // [10, 10, 10, 10, 10]
@@ -35,6 +35,9 @@ public class Homework {
 
     private static void printString(String source, int repeat) {
         // напечатать строку source repeat раз
+        for (int i = 0; i < repeat; i++) {
+            System.out.print(source);
+        }
     }
 
     private static boolean isLeapYear(int year) {
