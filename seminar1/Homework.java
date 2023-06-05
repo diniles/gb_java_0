@@ -1,14 +1,14 @@
 public class Homework {
 
     public static void main(String[] args) {
-        System.out.println(isSumBetween10And20(5, 10)); // true
-        System.out.println(isSumBetween10And20(5, 15)); // true
-        System.out.println(isSumBetween10And20(7, 15)); // false
-        System.out.println(isSumBetween10And20(2, 6)); // false
+//        System.out.println(isSumBetween10And20(5, 10)); // true
+//        System.out.println(isSumBetween10And20(5, 15)); // true
+//        System.out.println(isSumBetween10And20(7, 15)); // false
+//        System.out.println(isSumBetween10And20(2, 6)); // false
 
-//        System.out.println(isPositive(5)); // true
-//        System.out.println(isPositive(0)); // false
-//        System.out.println(isPositive(-3)); // false
+        System.out.println(isPositive(5)); // true
+        System.out.println(isPositive(0)); // false
+        System.out.println(isPositive(-3)); // false
 //
 //        printString("abcd", 5); // abcdabcdabcdabcdabcd
 //
@@ -30,7 +30,7 @@ public class Homework {
 
     private static boolean isPositive(int x) {
         // проверить, что х положительное
-        return false;
+        return x > 0;
     }
 
     private static void printString(String source, int repeat) {
