@@ -6,17 +6,17 @@ public class Homework {
         System.out.println(isSumBetween10And20(7, 15)); // false
         System.out.println(isSumBetween10And20(2, 6)); // false
 
-        System.out.println(isPositive(5)); // true
-        System.out.println(isPositive(0)); // false
-        System.out.println(isPositive(-3)); // false
-
-        printString("abcd", 5); // abcdabcdabcdabcdabcd
-
-        int[] arr = createArray(5, 10);
-        System.out.println(Arrays.toString(arr)); // [10, 10, 10, 10, 10]
-
-        int[][] array = new int[4][4]; // [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, x], [0, 0, 0, 1]]
-        int x = array[2][3];
+//        System.out.println(isPositive(5)); // true
+//        System.out.println(isPositive(0)); // false
+//        System.out.println(isPositive(-3)); // false
+//
+//        printString("abcd", 5); // abcdabcdabcdabcdabcd
+//
+//        int[] arr = createArray(5, 10);
+//        System.out.println(Arrays.toString(arr)); // [10, 10, 10, 10, 10]
+//
+//        int[][] array = new int[4][4]; // [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, x], [0, 0, 0, 1]]
+//        int x = array[2][3];
     }
 
     /**
@@ -25,7 +25,7 @@ public class Homework {
      */
     private static boolean isSumBetween10And20(int a, int b) {
         // проверить, что сумма a и b лежит между 10 и 20
-        return false;
+        return a + b >= 10 && a + b <= 20;
     }
 
     private static boolean isPositive(int x) {
