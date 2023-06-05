@@ -1,5 +1,7 @@
 package seminar1;
 
+import java.util.Arrays;
+
 public class Homework {
 
     public static void main(String[] args) {
@@ -14,14 +16,14 @@ public class Homework {
 //
 //        printString("abcd", 5); // abcdabcdabcdabcdabcd
 //
-        System.out.println(isLeapYear(0));
-        System.out.println(isLeapYear(4));
-        System.out.println(isLeapYear(100));
-        System.out.println(isLeapYear(400));
-        System.out.println(isLeapYear(2024));
-
-//        int[] arr = createArray(5, 10);
-//        System.out.println(Arrays.toString(arr)); // [10, 10, 10, 10, 10]
+//        System.out.println(isLeapYear(0));
+//        System.out.println(isLeapYear(4));
+//        System.out.println(isLeapYear(100));
+//        System.out.println(isLeapYear(400));
+//        System.out.println(isLeapYear(2024));
+//
+        int[] arr = createArray(5, 10);
+        System.out.println(Arrays.toString(arr)); // [10, 10, 10, 10, 10]
 //
 //        int[][] array = new int[4][4]; // [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, x], [0, 0, 0, 1]]
 //        int x = array[2][3];
@@ -56,7 +58,11 @@ public class Homework {
 
     private static int[] createArray(int len, int initialValue) {
         // должен вернуть массив длины len, каждое значение которого равно initialValue
-        return null;
+        int[] array = new int[len];
+        for (int i = 0; i < len; i++) {
+            array[i] = initialValue;
+        }
+        return array;
     }
 
 /**
