@@ -5,37 +5,52 @@ import java.util.Arrays;
 public class Homework {
 
     public static void main(String[] args) {
-//        System.out.println(isSumBetween10And20(5, 10)); // true
-//        System.out.println(isSumBetween10And20(5, 15)); // true
-//        System.out.println(isSumBetween10And20(7, 15)); // false
-//        System.out.println(isSumBetween10And20(2, 6)); // false
+        System.out.println("-=Start task isSumBetween10And20=-");
+        System.out.println(isSumBetween10And20(5, 10)); // true
+        System.out.println(isSumBetween10And20(5, 15)); // true
+        System.out.println(isSumBetween10And20(7, 15)); // false
+        System.out.println(isSumBetween10And20(2, 6)); // false
+        System.out.println("-=End task isSumBetween10And20=-\n");
 
-//        System.out.println(isPositive(5)); // true
-//        System.out.println(isPositive(0)); // false
-//        System.out.println(isPositive(-3)); // false
-//
-//        printString("abcd", 5); // abcdabcdabcdabcdabcd
-//
-//        System.out.println(isLeapYear(0));
-//        System.out.println(isLeapYear(4));
-//        System.out.println(isLeapYear(100));
-//        System.out.println(isLeapYear(400));
-//        System.out.println(isLeapYear(2024));
-//
-//        int[] arr = createArray(5, 10);
-//        System.out.println(Arrays.toString(arr)); // [10, 10, 10, 10, 10]
-//
-//        int[] array = {0, 1, 0, 1, 0, 1, 0, 1, 0};
-//        changeOneToZero(array);
-//
-//        timesTwo(new int[]{1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1});
-//
+        System.out.println("-=Start task isPositive=-");
+        System.out.println(isPositive(5)); // true
+        System.out.println(isPositive(0)); // false
+        System.out.println(isPositive(-3)); // false
+        System.out.println("-=End task isPositive=-\n");
 
+        System.out.println("-=Start task printString=-");
+        printString("abcd", 5); // abcdabcdabcdabcdabcd
+        System.out.println("\n-=End task printString=-\n");
+
+        System.out.println("-=Start task isLeapYear=-");
+        System.out.println(isLeapYear(0));
+        System.out.println(isLeapYear(4));
+        System.out.println(isLeapYear(100));
+        System.out.println(isLeapYear(400));
+        System.out.println(isLeapYear(2024));
+        System.out.println("-=End task isLeapYear=-\n");
+
+        System.out.println("-=Start task createArray=-");
+        int[] arr = createArray(5, 10);
+        System.out.println(Arrays.toString(arr)); // [10, 10, 10, 10, 10]
+        System.out.println("-=End task createArray=-\n");
+
+        System.out.println("-=Start task changeOneToZero=-");
+        int[] array = {0, 1, 0, 1, 0, 1, 0, 1, 0};
+        changeOneToZero(array);
+        System.out.println("\n-=End task changeOneToZero=-\n");
+
+        System.out.println("-=Start task timesTwo=-");
+        timesTwo(new int[]{1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1});
+        System.out.println("\n-=End task timesTwo=-\n");
+
+        System.out.println("-=Start task fillMatrixDiagonals=-");
         int[][] matrix = new int[4][4]; // [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, x], [0, 0, 0, 1]]
         printMatrixInt(matrix);
         System.out.println();
         fillMatrixDiagonals(matrix);
         printMatrixInt(matrix);
+        System.out.println("-=End task fillMatrixDiagonals=-\n");
     }
 
     /**
