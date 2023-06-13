@@ -5,6 +5,7 @@
 package seminar3;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Homework {
     /*
@@ -20,7 +21,7 @@ public class Homework {
     }
 
     static Integer findMin(ArrayList<Integer> list) {
-        return 0;
+        return Collections.min(list);
     }
 
     static Integer findMax(ArrayList<Integer> list) {

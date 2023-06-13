@@ -25,4 +25,13 @@ public class HomeworkTest {
 
         Assertions.assertArrayEquals(correctList, listOfOddNumbers);
     }
+
+    @Test
+    public void findMinTest() {
+        ArrayList<Integer> listOfNumbers = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            listOfNumbers.add(i);
+        }
+        Assertions.assertEquals(0, Homework.findMin(listOfNumbers));
+    }
 }
