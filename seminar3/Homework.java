@@ -15,21 +15,20 @@ public class Homework {
     4) Найти среднее значение
     То есть, нужно реализовать 4 метода, каждый из которых принимает список целых чисел, и делает свою работу.
     */
-    void removeEven(ArrayList<Integer> list) {
-
+    static void removeEven(ArrayList<Integer> list) {
+        list.removeIf(i -> (i % 2 == 0));
     }
 
-    Integer findMin(ArrayList<Integer> list) {
+    static Integer findMin(ArrayList<Integer> list) {
         return 0;
     }
 
-    Integer findMax(ArrayList<Integer> list) {
+    static Integer findMax(ArrayList<Integer> list) {
         return 0;
     }
 
-    Integer findAverage(ArrayList<Integer> list) {
+    static Integer findAverage(ArrayList<Integer> list) {
         return 0;
     }
-
 
 }
