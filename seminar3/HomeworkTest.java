@@ -43,4 +43,13 @@ public class HomeworkTest {
         }
         Assertions.assertEquals(9, Homework.findMax(listOfNumbers));
     }
+
+    @Test
+    public void findAverageTest() {
+        ArrayList<Integer> listOfNumbers = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            listOfNumbers.add(i);
+        }
+        Assertions.assertEquals(4.5, Homework.findAverage(listOfNumbers));
+    }
 }

@@ -28,8 +28,11 @@ public class Homework {
         return Collections.max(list);
     }
 
-    static Integer findAverage(ArrayList<Integer> list) {
-        return 0;
+    static Double findAverage(ArrayList<Integer> list) {
+        double sum = 0;
+        for (int element : list) {
+            sum += element;
+        }
+        return sum / list.size();
     }
-
 }
