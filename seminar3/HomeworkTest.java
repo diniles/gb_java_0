@@ -34,4 +34,13 @@ public class HomeworkTest {
         }
         Assertions.assertEquals(0, Homework.findMin(listOfNumbers));
     }
+
+    @Test
+    public void findMaxTest() {
+        ArrayList<Integer> listOfNumbers = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            listOfNumbers.add(i);
+        }
+        Assertions.assertEquals(9, Homework.findMax(listOfNumbers));
+    }
 }

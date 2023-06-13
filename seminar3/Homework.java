@@ -25,7 +25,7 @@ public class Homework {
     }
 
     static Integer findMax(ArrayList<Integer> list) {
-        return 0;
+        return Collections.max(list);
     }
 
     static Integer findAverage(ArrayList<Integer> list) {
