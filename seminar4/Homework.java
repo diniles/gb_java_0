@@ -52,7 +52,7 @@ public class Homework {
             System.out.println("[]");
         } else {
             System.out.print("[");
-            for (Iterator itr = list.descendingIterator();
+            for (Iterator<String> itr = list.descendingIterator();
                  itr.hasNext(); ) {
                 System.out.print(itr.next() + ", ");
             }
