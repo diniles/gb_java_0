@@ -38,18 +38,24 @@ public class Homework {
         String[] input = new String[3];
         while (scanner.hasNext()) {
             String inputString = scanner.nextLine();
+            String command = "";
+            String name = "";
+            String phone = "";
             if (inputString.equalsIgnoreCase("EXIT")) {
                 return;
             } else {
                 input = inputString.split(" ");
+                command = input[0].toUpperCase();
+                name = input[1].toUpperCase();
+                phone = input[2];
             }
-            String command = input[0];
-            String name = input[1];
-            String phone = input[2];
-            switch (command.toUpperCase()) {
+            switch (command) {
                 case "ADD" -> {
                     addToPhonebook(phoneBook, name, phone);
                     System.out.println(phoneBook);
+                }
+                case "GET" -> {
+                    getFromPhonebook(phoneBook, name);
                 }
             }
         }
@@ -62,6 +68,22 @@ public class Homework {
             List<String> phones = phoneBook.get(name);
             phones.add(phone);
             phoneBook.put(name, phones);
+        }
+    }
+
+    private static void getFromPhonebook(HashMap<String, List<String>> phoneBook, String name) {
+        if (phoneBook.containsKey(name)) {
+            System.out.printf("%s phone(s) number", name);
+            for (String el : phoneBook.get(name)) {
+                System.out.println(el);
+            }
+            System.out.println();
+        }
+
+        try {
+
+        } catch (Exception e) {
+            System.out.println("Can't find records for this name " + name);
         }
     }
 }
