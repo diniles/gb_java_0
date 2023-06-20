@@ -49,14 +49,15 @@ public class Homework {
                 parseInput(inputString);
             }
             switch (command) {
-                case "ADD" -> {
-                    addToPhonebook(phoneBook, name, phone);
-                }
-                case "GET" -> {
-                    getFromPhonebook(phoneBook, name);
-                }
-                case "LIST" -> {
-                    System.out.println(phoneBook);
+                case "ADD" -> addToPhonebook(phoneBook, name, phone);
+                case "GET" -> getFromPhonebook(phoneBook, name);
+                case "LIST" -> System.out.println(phoneBook);
+                case "REMOVE" -> removeFromPhonebook(phoneBook, name);
+                default -> {
+                    System.out.println("Unknown command name");
+                    System.out.println("Please enter in this format: \"COMMAND NAME PHONE\"");
+                    System.out.println("Or: \"COMMAND NAME\"");
+                    System.out.println("Or: \"EXIT\" to exit");
                 }
             }
         }
@@ -81,7 +82,7 @@ public class Homework {
 
     private static void addToPhonebook(HashMap<String, List<String>> phoneBook, String name, String phone) {
         if (!phoneBook.containsKey(name)) {
-            phoneBook.put(name, new ArrayList<>(Arrays.asList(phone)));
+            phoneBook.put(name, new ArrayList<>(Collections.singletonList(phone)));
         } else {
             List<String> phones = phoneBook.get(name);
             phones.add(phone);
@@ -99,4 +100,13 @@ public class Homework {
             System.out.println("Can't find records for this name " + name);
         }
     }
+
+    private static void removeFromPhonebook(HashMap<String, List<String>> phoneBook, String name) {
+        if (phoneBook.containsKey(name)) {
+            phoneBook.remove(name);
+        } else {
+            System.out.println("Can't find records for this name " + name);
+        }
+    }
+
 }
