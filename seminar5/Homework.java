@@ -51,10 +51,12 @@ public class Homework {
             switch (command) {
                 case "ADD" -> {
                     addToPhonebook(phoneBook, name, phone);
-                    System.out.println(phoneBook);
                 }
                 case "GET" -> {
                     getFromPhonebook(phoneBook, name);
+                }
+                case "LIST" -> {
+                    System.out.println(phoneBook);
                 }
             }
         }
