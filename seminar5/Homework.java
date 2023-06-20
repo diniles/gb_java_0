@@ -33,8 +33,35 @@ import java.util.*;
 
 public class Homework {
     public static void main(String[] args) {
-        HashMap<String, List<String>> phoneBook = new HashMap<String, List<String>>();
+        HashMap<String, List<String>> phoneBook = new HashMap<>();
+        Scanner scanner = new Scanner(System.in);
+        String[] input = new String[3];
+        while (scanner.hasNext()) {
+            String inputString = scanner.nextLine();
+            if (inputString.equalsIgnoreCase("EXIT")) {
+                return;
+            } else {
+                input = inputString.split(" ");
+            }
+            String command = input[0];
+            String name = input[1];
+            String phone = input[2];
+            switch (command.toUpperCase()) {
+                case "ADD" -> {
+                    addToPhonebook(phoneBook, name, phone);
+                    System.out.println(phoneBook);
+                }
+            }
+        }
+    }
 
-
+    private static void addToPhonebook(HashMap<String, List<String>> phoneBook, String name, String phone) {
+        if (!phoneBook.containsKey(name)) {
+            phoneBook.put(name, new ArrayList<>(Arrays.asList(phone)));
+        } else {
+            List<String> phones = phoneBook.get(name);
+            phones.add(phone);
+            phoneBook.put(name, phones);
+        }
     }
 }
