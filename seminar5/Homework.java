@@ -32,22 +32,21 @@ package seminar5;
 import java.util.*;
 
 public class Homework {
+    static String command = "";
+    static String name = "";
+    static String phone = "";
+    static String[] input = new String[3];
+
     public static void main(String[] args) {
         HashMap<String, List<String>> phoneBook = new HashMap<>();
         Scanner scanner = new Scanner(System.in);
-        String[] input = new String[3];
         while (scanner.hasNext()) {
             String inputString = scanner.nextLine();
-            String command = "";
-            String name = "";
-            String phone = "";
+
             if (inputString.equalsIgnoreCase("EXIT")) {
                 return;
             } else {
-                input = inputString.split(" ");
-                command = input[0].toUpperCase();
-                name = input[1].toUpperCase();
-                phone = input[2];
+                parseInput(inputString);
             }
             switch (command) {
                 case "ADD" -> {
@@ -58,6 +57,23 @@ public class Homework {
                     getFromPhonebook(phoneBook, name);
                 }
             }
+        }
+    }
+
+    private static void parseInput(String inputString) {
+        input = inputString.split(" ", 3);
+        switch (input.length) {
+            case 1 -> command = input[0].toUpperCase();
+            case 2 -> {
+                command = input[0].toUpperCase();
+                name = input[1].toUpperCase();
+            }
+            case 3 -> {
+                command = input[0].toUpperCase();
+                name = input[1].toUpperCase();
+                phone = input[2];
+            }
+            default -> System.out.println("Please enter in this format: COMMAND NAME PHONE");
         }
     }
 
@@ -73,16 +89,11 @@ public class Homework {
 
     private static void getFromPhonebook(HashMap<String, List<String>> phoneBook, String name) {
         if (phoneBook.containsKey(name)) {
-            System.out.printf("%s phone(s) number", name);
+            System.out.printf("%s phone number(s)\n", name);
             for (String el : phoneBook.get(name)) {
                 System.out.println(el);
             }
-            System.out.println();
-        }
-
-        try {
-
-        } catch (Exception e) {
+        } else {
             System.out.println("Can't find records for this name " + name);
         }
     }
