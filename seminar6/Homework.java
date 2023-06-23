@@ -28,8 +28,8 @@ public class Homework {
         System.out.println(plate);
 
 
-        Cat first = new Cat("Name", 150);
-        Cat second = new Cat("Name", 100);
+        Cat first = new Cat("Name1", 150);
+        Cat second = new Cat("Name2", 100);
 
         System.out.println(first == second); // false
         System.out.println(first.equals(second));
