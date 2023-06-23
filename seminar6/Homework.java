@@ -16,6 +16,12 @@ package seminar6;
 
 public class Homework {
     public static void main(String[] args) {
-        
+        Cat cat1 = new Cat("Murzik", 20);
+        Cat cat2 = new Cat("Gav", 7);
+
+        System.out.println(cat1.getName());
+        System.out.println(cat2.getName());
+
+        System.out.println(cat1.toString());
     }
 }
