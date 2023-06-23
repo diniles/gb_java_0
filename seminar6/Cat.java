@@ -27,7 +27,7 @@ public class Cat {
 
     @Override
     public String toString() {
-        return name + " [" + appetite + "], " + "satiety? " + satiety;
+        return name + " [" + appetite + "], " + "satiety?" + satiety;
     }
 
     @Override
