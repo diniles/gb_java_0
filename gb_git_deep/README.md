@@ -4,4 +4,3 @@
 2. Second commit for lesson 2
 3. Third commit for lesson 2
 4. Fourth commit for lesson 2
-5. Fifth commit for lesson 2
