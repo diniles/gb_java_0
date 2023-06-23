@@ -14,14 +14,32 @@
 */
 package seminar6;
 
+import java.util.HashSet;
+
 public class Homework {
     public static void main(String[] args) {
-        Cat cat1 = new Cat("Murzik", 20);
-        Cat cat2 = new Cat("Gav", 7);
+        Cat murzik = new Cat("Murzik", 150);
+        Plate plate = new Plate(150);
 
-        System.out.println(cat1.getName());
-        System.out.println(cat2.getName());
+        murzik.eat(plate);
+        murzik.eat(plate);
 
-        System.out.println(cat1.toString());
+        System.out.println(murzik);
+        System.out.println(plate);
+
+
+        Cat first = new Cat("Name", 150);
+        Cat second = new Cat("Name", 100);
+
+        System.out.println(first == second); // false
+        System.out.println(first.equals(second));
+
+        System.out.println(first.hashCode());
+        System.out.println(second.hashCode());
+
+        HashSet<Cat> cats = new HashSet<>();
+        cats.add(first);
+        cats.add(second);
+        System.out.println(cats);
     }
 }
