@@ -2,4 +2,3 @@
 
 1. First commit for lesson 2
 2. Second commit for lesson 2
-3. Third commit for lesson 2
