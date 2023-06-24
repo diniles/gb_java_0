@@ -18,7 +18,7 @@ public class Cat {
         return name;
     }
 
-    public int eat(Plate plate) {
+    public void eat(Plate plate) {
         int realSatiety = (10 - satiety);
         int needFood = realSatiety * 10;
         int foodOnPlate = plate.getFood();
@@ -29,7 +29,6 @@ public class Cat {
             plate.decreaseFood(foodOnPlate);
             satiety += foodOnPlate / 10;
         }
-        return satiety;
     }
 
     @Override

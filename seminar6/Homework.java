@@ -18,21 +18,26 @@ import java.util.HashSet;
 
 public class Homework {
     public static void main(String[] args) {
+        Plate plate = new Plate(250);
         Cat murzik = new Cat("Murzik", 100, 5);
-        Plate plate = new Plate(25);
+        Cat gav = new Cat("Gav", 50, 3);
 
-        System.out.println(10 / 10);
-
-        System.out.println(murzik);
-        System.out.println(plate);
+        System.out.printf("Now on the plate %s pieces of food.\n", plate);
+        System.out.printf("Cat %s.\n", murzik);
+        System.out.printf("Cat %s.\n", gav);
 
         murzik.eat(plate);
+        gav.eat(plate);
 
-        System.out.println(murzik);
-        System.out.println(plate);
+        System.out.printf("Now on the plate %s pieces of food.\n", plate);
+        System.out.printf("Cat %s.\n", murzik);
+        System.out.printf("Cat %s.\n", gav);
+        System.out.printf("Now on the plate %s pieces of food.\n", plate);
 
-//        HashSet<Cat> cats = new HashSet<>();
-//        cats.add(murzik);
-//        System.out.println(cats);
+        HashSet<Cat> cats = new HashSet<>();
+        cats.add(murzik);
+        cats.add(gav);
+        System.out.println("Our cats");
+        System.out.println(cats);
     }
 }
