@@ -24,8 +24,8 @@ public class Plate {
         }
     }
 
-    public int decreaseFood(int food) {
-        return this.food -= food;
+    public void decreaseFood(int food) {
+        this.food -= food;
     }
 
     @Override
