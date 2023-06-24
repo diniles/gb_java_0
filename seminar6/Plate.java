@@ -14,18 +14,18 @@ public class Plate {
         this.food = food;
     }
 
+    public int getFood() {
+        return this.food;
+    }
+
     public void increaseFood(int food) {
         if (food > 0) {
             this.food += food;
         }
     }
 
-    public boolean decreaseFood(int food) {
-        if (this.food >= food) {
-            this.food -= food;
-            return true;
-        }
-        return false;
+    public int decreaseFood(int food) {
+        return this.food -= food;
     }
 
     @Override

@@ -6,23 +6,30 @@ public class Cat {
 
     private String name;
     private int appetite;
-    private boolean satiety;
+    private int satiety;
 
-    public Cat(String name, int appetite) {
+    public Cat(String name, int appetite, int satiety) {
         this.name = name;
         this.appetite = appetite;
-        satiety = false;
+        this.satiety = satiety;
     }
 
     public String getName() {
         return name;
     }
 
-    public void eat(Plate plate) {
-        if (satiety) {
-            return;
+    public int eat(Plate plate) {
+        int realSatiety = (10 - satiety);
+        int needFood = realSatiety * 10;
+        int foodOnPlate = plate.getFood();
+        if (needFood <= foodOnPlate) {
+            plate.decreaseFood(needFood);
+            satiety += needFood / 10;
+        } else {
+            plate.decreaseFood(foodOnPlate);
+            satiety += foodOnPlate / 10;
         }
-        satiety = plate.decreaseFood(appetite);
+        return satiety;
     }
 
     @Override
